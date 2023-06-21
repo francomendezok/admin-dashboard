@@ -110,7 +110,7 @@ table {
     height: 45%;
     border: 0px;
     justify-self: stretch;
-    max-width: 90%;
+    max-width: 80%;
     margin-left: 2%;
 }
 
@@ -202,8 +202,8 @@ h5 {
     text-align: left;
     width: 80%;
     margin: auto;
-    overflow: hidden;
 }
+
 .icons {
     display: flex;
     justify-content: end;
@@ -229,7 +229,8 @@ h5 {
 }
 
 .big-profile-pic {
-    width: 40%;
+    width: 80%;
+    height: 100%;
     border-radius: 50%;
 }
 
@@ -266,21 +267,24 @@ h5 {
 
 .presentation {
     display: grid;
-    grid-template: 1fr / 0.5fr 1fr 2fr;
+    grid-template: 1fr 0.1fr / 0.5fr 3fr 1.5fr;
     align-items: center;
     justify-items: center;
 }
 
 .buttons {
-    display: flex;
-    gap: 10%;
+    display: grid;
+    gap: 7%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column: 3 / 4;
 }
 
 button {
     border: none;
+    width: 100px;
     box-shadow: none;
     cursor: pointer;
-    padding: 9px 20px;
+    padding: 2px;
     font-size: 100%;
     height: 40px;
     font-weight: 400;
@@ -296,7 +300,14 @@ button:hover{
     box-shadow: 0 0 0 0.15rem #5ceace;
     }
 
-.p-block {
-    justify-self: start;
-    font-size: 200%;
+
+
+#welcome {
+    font-size: 150%;
 }
+
+#username {
+    font-size: 250%;
+}
+
+/* MAIN -  I need everything to be a grid, not just projects. Next Games and Trending need to become part of the same container as projects, just with different height */
