@@ -208,11 +208,11 @@ main {
     border-radius: 6px;
     text-align: center;
     border-left: 5px solid orange;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
 }
 
 .card h3 {
-    font-size: 120%;
+    font-size: 100%;
     font-weight: bold;
     text-align: center;
     margin: auto;
@@ -238,28 +238,33 @@ main {
 
 .next-games {
     background-color: #fff;
-    height: 63%;
+    height: 80%;
     width: 80%;
     border-radius: 6px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
+    display: grid;
+    font-size: 0.8rem;
+    justify-self: center;
+    align-self: center;
+    align-items: center;
 }
 
 .next-game-section {
     text-align: center;
     justify-content: center;
     align-items: center;
+    display: flex;
 }
 
 .img-clubs {
     width: 10%;
     height: 20%;
+    display: inline;
 }
 
 .next-game-section h5, p {
     gap: 10px;
-    font-size: 90%;
+    font-size: 100%;
     display: flex;
     align-items: center;
     text-align: center;
@@ -273,7 +278,9 @@ main {
     border-radius: 6px;
     display: grid;
     grid-template: repeat(4, 1fr) / 4fr 1fr;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
+    justify-self: center;
+    align-self: center;
 }
 
 
