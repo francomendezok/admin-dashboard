@@ -43,48 +43,17 @@ table {
 	border-spacing: 0;
 }
 
-
-
-
+/* GRID GLOBAL CONTAINER*/
 .content {
     width: 100vw;
     height: 100vh;
     display: grid;
     grid-template: 1fr 4fr / 1fr 4fr;
+    font-family: "Arial";
 }
 
-.sidebar {
-    background-color: #0076CE;
-    grid-column: 1;
-    grid-row: 1 / -1;
-    font-size: 150%;
-}
-
-.logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 120%;
-    margin-bottom: 20%;
-    margin-top: 10%;
-    color: white;
-}
-
-#ball {
-    height: 100%;
-    width: 20%;
-}
-
-.side-content {
-    display: grid;
-    grid-template: 1fr / 1fr 2fr;
-    gap: 15%;
-    justify-items: center;
-    color: white;
-}
-
-
-.header {
+/* HEADER */
+header {
     background-color: #fff;
     grid-column: 2 / -1;
 }
@@ -124,58 +93,110 @@ table {
     
 }
 
-.main {
+#profile-pic  {
+    width: 20%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.big-profile-pic {
+    width: 80%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.presentation {
+    display: grid;
+    grid-template: 1fr 0.1fr / 0.5fr 3fr 1.5fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.buttons {
+    display: grid;
+    gap: 7%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column: 3 / 4;
+}
+
+button {
+    border: none;
+    width: 100px;
+    box-shadow: none;
+    cursor: pointer;
+    padding: 2px;
+    font-size: 100%;
+    height: 40px;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    line-height: normal;
+    background: linear-gradient(90deg,#5522fa 0,#0074e4 100%);
+    border-radius: 50px;
+    transition: color .2s ease,background-color .2s ease,box-shadow .2s ease;
+}
+
+button:hover{
+    box-shadow: 0 0 0 0.15rem #5ceace;
+    }
+
+#welcome {
+    font-size: 150%;
+}
+
+#username {
+    font-size: 250%;
+}
+
+
+
+/* ASIDE */
+.sidebar {
+    background-color: #0076CE;
+    grid-column: 1;
+    grid-row: 1 / -1;
+    font-size: 150%;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 120%;
+    margin-bottom: 20%;
+    margin-top: 10%;
+    color: white;
+}
+
+#ball {
+    height: 100%;
+    width: 20%;
+}
+
+.side-content {
+    display: grid;
+    grid-template: 1fr / 1fr 2fr;
+    gap: 15% 0%;
+    justify-items: center;
+    color: white;
+}
+
+
+/* MAIN */
+main {
     background-color: #DCDCDC;
     grid-column: 2 / -1;
     display: grid;
     grid-template-columns: 3fr 1fr;
 }
 
-.projects {
+.news {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
     display: grid;
     grid-template: repeat(auto-fit, minmax(50px, 1fr)) / repeat(2, 1fr);
     align-items: center;
     justify-items: center;
-}
-
-.trending-container {
-    background-color: #fff;
-    height: 80%;
-    width: 80%;
-    border-radius: 6px;
-    display: grid;
-    grid-template: repeat(4, 1fr) / 4fr 1fr;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
-}
-
-#winners {
-    font-size: 120%;
-    text-align: left;
-    margin-bottom: 3%;
-}
-
-.trending-section {
-    display: grid;
-    align-items: center;
-    justify-items: start;
-    grid-column: 1 / -1;
-    margin-left: 10%;
-    
-}
-
-.block {
-    grid-column: 2 / 3;
-}
-
-h5 {
-    font-size: 120%;
-}
-
-.block > p {
-    color: grey;
-    font-size: 100%;
 }
 
 .card {
@@ -215,27 +236,7 @@ h5 {
     color: gold;
 }
 
-
-.trending-section > img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-}
-
-#profile-pic  {
-    width: 20%;
-    height: 100%;
-    border-radius: 50%;
-}
-
-.big-profile-pic {
-    width: 80%;
-    height: 100%;
-    border-radius: 50%;
-}
-
-
-.next-games-container {
+.next-games {
     background-color: #fff;
     height: 63%;
     width: 80%;
@@ -265,49 +266,42 @@ h5 {
     justify-content: center;
 }
 
-.presentation {
+.winners{
+    background-color: #fff;
+    height: 80%;
+    width: 80%;
+    border-radius: 6px;
     display: grid;
-    grid-template: 1fr 0.1fr / 0.5fr 3fr 1.5fr;
+    grid-template: repeat(4, 1fr) / 4fr 1fr;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+
+.last-winners {
+    display: grid;
     align-items: center;
-    justify-items: center;
+    justify-items: start;
+    grid-column: 1 / -1;
+    margin-left: 10%;
+    
 }
 
-.buttons {
-    display: grid;
-    gap: 7%;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-column: 3 / 4;
+.block {
+    grid-column: 2 / 3;
 }
 
-button {
-    border: none;
-    width: 100px;
-    box-shadow: none;
-    cursor: pointer;
-    padding: 2px;
+h5 {
+    font-size: 120%;
+}
+
+.block > p {
+    color: grey;
     font-size: 100%;
+}
+
+
+.last-winners > img {
+    width: 40px;
     height: 40px;
-    font-weight: 400;
-    color: #fff;
-    text-align: center;
-    line-height: normal;
-    background: linear-gradient(90deg,#5522fa 0,#0074e4 100%);
-    border-radius: 50px;
-    transition: color .2s ease,background-color .2s ease,box-shadow .2s ease;
+    border-radius: 50%;
 }
-
-button:hover{
-    box-shadow: 0 0 0 0.15rem #5ceace;
-    }
-
-
-
-#welcome {
-    font-size: 150%;
-}
-
-#username {
-    font-size: 250%;
-}
-
-/* MAIN -  I need everything to be a grid, not just projects. Next Games and Trending need to become part of the same container as projects, just with different height */
