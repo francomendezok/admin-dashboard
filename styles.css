@@ -52,6 +52,10 @@ table {
     font-family: "Arial";
 }
 
+:root {
+    --blue: #0076CE;
+}
+
 /* HEADER */
 header {
     background-color: #fff;
@@ -100,7 +104,7 @@ header {
 }
 
 .big-profile-pic {
-    width: 80%;
+    width: 70%;
     height: 100%;
     border-radius: 50%;
 }
@@ -131,7 +135,7 @@ button {
     color: #fff;
     text-align: center;
     line-height: normal;
-    background: linear-gradient(90deg,#5522fa 0,#0074e4 100%);
+    background: linear-gradient(90deg,#5522fa 0,var(--blue) 100%);
     border-radius: 50px;
     transition: color .2s ease,background-color .2s ease,box-shadow .2s ease;
 }
@@ -142,17 +146,20 @@ button:hover{
 
 #welcome {
     font-size: 150%;
+    text-align: center;
 }
 
 #username {
     font-size: 250%;
+    text-align: center;
+
 }
 
 
 
 /* ASIDE */
 .sidebar {
-    background-color: #0076CE;
+    background-color: var(--blue);
     grid-column: 1;
     grid-row: 1 / -1;
     font-size: 150%;
@@ -181,10 +188,17 @@ button:hover{
     color: white;
 }
 
+.label:hover {
+    color: black;
+    cursor: pointer;
+}
+
 
 /* MAIN */
 main {
-    background-color: #DCDCDC;
+    background: #fe8c00;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f83600, #fe8c00);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f83600, #fe8c00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     grid-column: 2 / -1;
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -207,7 +221,7 @@ main {
     flex-direction: column;
     border-radius: 6px;
     text-align: center;
-    border-left: 5px solid orange;
+    border-left: 5px solid var(--blue);
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
 }
 
@@ -230,6 +244,7 @@ main {
     justify-content: end;
     gap: 5%;
     margin-right: 5%;
+    margin-bottom: 2%;
 }
 
 .fa-eye:hover,.fa-plus-circle:hover,.fa-star:hover {
@@ -243,6 +258,8 @@ main {
     border-radius: 6px;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
     display: grid;
+    grid-auto-flow: column;
+    grid-template: 1fr 1fr 1fr / 1fr;
     font-size: 0.8rem;
     justify-self: center;
     align-self: center;
@@ -254,21 +271,30 @@ main {
     justify-content: center;
     align-items: center;
     display: flex;
+    border-bottom: 1px solid black;
+    padding: 5%;
 }
+
+.next-game-section:nth-child(3) {
+    border: none;
+}
+
+.wrap-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
 
 .img-clubs {
-    width: 10%;
+    width: 20%;
     height: 20%;
-    display: inline;
 }
 
-.next-game-section h5, p {
-    gap: 10px;
+.next-game-section h5{
     font-size: 100%;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
 }
 
 .winners{
@@ -285,19 +311,20 @@ main {
 
 
 .last-winners {
-    display: grid;
+    display: flex;
     align-items: center;
-    justify-items: start;
+    justify-content: start;
     grid-column: 1 / -1;
-    margin-left: 10%;
-    
 }
 
 .block {
     grid-column: 2 / 3;
+    text-align: right;
+    margin-left: auto;
+    margin-right: 5%;
 }
 
-h5 {
+.block > h5 {
     font-size: 120%;
 }
 
@@ -306,9 +333,11 @@ h5 {
     font-size: 100%;
 }
 
-
 .last-winners > img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    border-radius: 10%;
+    border: 1px solid white;
+    margin-left: 3%;
+
 }
